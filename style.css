@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(205, 255, 206, 0.603);
+    /* filter: blur(2px); */
+    
+}
+.container{
+    width: 70vw;
+    min-height: 100vh;
+    margin: auto;
+    background-color: white;
+    box-sizing: border-box;
+    /* filter: blur(0px); */
+    z-index: 200;
+    
+}
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 15px 60px;
+    
+}
+input[type="text"],button,textarea{
+    margin: 1.5vh;
+    padding: 10px;
+    font-size: 1.4vw;
+    border: 1px solid rgba(0, 0, 0, 0.29);
+
+}
+button{
+    background-color: rgb(158, 240, 159);
+    border: none;
+    cursor: pointer;
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 70px;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    
+    
+}
+.ticket{
+    display: flex;
+    border: 2px solid rgb(228, 220, 220);
+    box-sizing: border-box;
+    /* padding: 10px; */
+    height: 100%;
+    height: 10vh;
+    border: 2px solid rgba(0, 0, 0, 0.87);
+    margin-top: 2vh;
+    
+}
+.ticket_name{
+    width: 20%;
+    height: 100%;
+    /* border: 2px solid black; */
+    text-align: center;
+    font-size: 1.6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(113, 216, 164);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 8px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+
+}
+.ticket_desc{
+    width: 70%;
+    height: 100%;
+    border-left: 2px solid black;
+    text-align: center;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 8px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+.ticket_delete{
+    width: 10%;
+    height: 100%;
+    font-size: 3vw;
+    display: flex;
+    border-left: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(113, 216, 164);
+    cursor: pointer;
+}
+
+
+@media (max-width:600px) {
+    
+    .container{
+        width: 100vw;
+    }
+    .ticket_name{
+        font-size: 5vw;
+        width: 30%;
+    }
+    .ticket_desc{
+        width: 60%;
+        font-size: 3.5vw;
+    }
+    .tasks{
+        padding: 0 20px;
+    }
+    form{
+        padding: 0 15px;
+    }
+    input[type="text"],button,textarea{
+        margin: 1.5vh;
+        padding: 10px;
+        font-size: 4vw;
+        border: 1px solid rgba(0, 0, 0, 0.29);
+    
+    }
+}
